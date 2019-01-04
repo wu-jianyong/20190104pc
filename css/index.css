@@ -1,5 +1,5 @@
 /*css样式*/
-/*html,body {height: 100%;overflow: hidden;}*/
+html,body {height: 100%;overflow: hidden;}
 html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px "微软雅黑";}
 a{text-decoration: none;display: block;}
 li{list-style: none;}
@@ -71,11 +71,15 @@ header{
     right:0;
     left:0;
     background: rebeccapurple;
+    overflow: hidden;
 }
 .contentMain{
     height:500%;
     width:100%;
     background: palegreen;
+    position: absolute;
+    left:0;
+    top:0;
 }
 .contentMain>li{
     height:20%;

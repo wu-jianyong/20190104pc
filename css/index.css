@@ -1,0 +1,97 @@
+/*css样式*/
+/*html,body {height: 100%;overflow: hidden;}*/
+html,body,h1,h2,h3,h4,h5,h6,p,ul,li{margin: 0px;padding: 0px;font: 14px "微软雅黑";}
+a{text-decoration: none;display: block;}
+li{list-style: none;}
+img{display: block;}
+.clearfix{*zoom: 1;}
+.clearfix:after{content: "";display: block;clear: both;}
+body{
+    /*background: mediumpurple;*/
+}
+header{
+    width:100%;
+    background: yellow;
+    height:80px;
+    position: relative;
+}
+.headerMain{
+    width:1100px;
+    height:80px;
+    /*background: purple;*/
+    margin: 0 auto;
+}
+.logo{
+    float: left;
+    margin-top: 15px;
+}
+.icon{
+    float: left;
+    margin-top: 50px;
+}
+.nav{
+    float: right;
+    margin-top: 50px;
+}
+.nav li{
+    float: left;
+    cursor: pointer;
+    margin-left: 40px;
+    position: relative;
+}
+.nav li .up{
+    color: #009EE0;
+}
+.nav li .down{
+    position: absolute;
+    left:0;
+    top:0;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+}
+.nav li:hover .down{
+    width:100% !important;
+}
+.arrow{
+    position: absolute;
+    left:0;
+    bottom: -11px;
+    width:21px;
+    height:11px;
+    transition: left 1s;
+    z-index: 10;
+}
+.content{
+
+    position: absolute;
+    top:80px;
+    bottom:0;
+    right:0;
+    left:0;
+    background: rebeccapurple;
+}
+.contentMain{
+    height:500%;
+    width:100%;
+    background: palegreen;
+}
+.contentMain>li{
+    height:20%;
+    position: relative;
+    background: mediumpurple;
+
+}
+.contentCenter{
+    width:1100px;
+    height:520px;
+    background: pink;
+
+    position: absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    top:0;
+    margin:auto;
+}

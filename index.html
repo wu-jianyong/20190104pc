@@ -1,29 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        #box {
-            width: 200px;
-            height: 200px;
-            background: deeppink;
-        }
-    </style>
+    <title></title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div id="box"></div>
+<div id="wrap">
+    <header>
+        <div class="headerMain">
+            <h1 class="logo"><img src="img/logo.png"/></h1>
+            <img class="icon" src="img/musicon.gif" />
+            <ul class="nav">
+                <li>
+                    <a class="up" href="javascript:;">
+                        <img src="img/home_gruen.png"/>
+                      </a>
+                    <a class="down" href="javascript:;">
+                        <img src="img/home.png"/>
+                    </a>
+                </li>
+                <li>
+                    <a class="up" href="javascript:;">course</a>
+                    <a class="down" href="javascript:;">course</a>
+                </li>
+                <li>
+                    <a class="up" href="javascript:;">work</a>
+                    <a class="down" href="javascript:;">work</a>
+                </li>
+                <li>
+                    <a class="up" href="javascript:;">about</a>
+                    <a class="down" href="javascript:;">about</a>
+                </li>
+                <li>
+                    <a class="up" href="javascript:;">team</a>
+                    <a class="down" href="javascript:;">team</a>
+                </li>
+            </ul>
+        </div>
+        <div class="arrow">
+            <img src="img/arrow.png" alt="">
+        </div>
+    </header>
+    <!--内容区域-->
+    <div class="content">
+        <ul class="contentMain">
+            <li>
+                <div class="contentCenter"></div>
+            </li>
+            <li>
+                <div class="contentCenter"></div>
+            </li>
+            <li>
+                <div class="contentCenter"></div>
+            </li>
+            <li>
+                <div class="contentCenter"></div>
+            </li>
+            <li>
+                <div class="contentCenter"></div>
+            </li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript" src="js/index.js"> </script>
+
+</div>
 </body>
-<script type="text/javascript">
-    window.onload = function () {
-        var box = document.getElementById('box');
-
-
-    }
-</script>
 </html>

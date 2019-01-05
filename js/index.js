@@ -85,6 +85,7 @@ function wheel(event) {
 window.onresize=function () {
     arrow.style.left=liNodes[nowindex].getBoundingClientRect().left+liNodes[nowindex].offsetWidth/2-arrow.offsetWidth/2+'px';
 }
+// 小圆点切换，图片旋转操作
 var licircleNodes=document.querySelectorAll('.circle li');
 var lichangeNodes=document.querySelectorAll('.fourmain li');
 var nowNum=0;
@@ -118,4 +119,38 @@ for (var i = 0; i < licircleNodes.length; i++) {
     }
 
 
+}
+// 自动轮播
+var timer=0;
+var count=0;
+var lastcount=0;
+autoPlay();
+function autoPlay() {
+    timer=setInterval(function () {
+        count++;
+        if(count>3){
+            count=0;
+        }
+        // console.log(count)
+        for (var i = 0; i < licircleNodes.length; i++) {
+            licircleNodes[i].className='';
+            lichangeNodes[i].style.visibility='hidden';
+
+        }
+
+        licircleNodes[count].className='active';
+        lichangeNodes[count].style.visibility='visible'
+        lichangeNodes[lastcount].style.visibility='visible'
+        lichangeNodes[count].className='rightShow';
+        lichangeNodes[lastcount].className='leftHide';
+        lastcount=count;
+    },2500);
+}
+
+var contentCenter=document.querySelector('.contentCenter');
+contentCenter.onmouseenter=function () {
+    clearInterval(timer);
+};
+contentCenter.onmouseleave=function () {
+    autoPlay();
 }

@@ -1,13 +1,21 @@
 
 var liNodes=document.querySelectorAll('.headerMain li');
 var dowmNodes=document.querySelectorAll('.nav .down');
+
 var arrow =document.querySelector('.arrow');
 arrow.style.left=liNodes[0].getBoundingClientRect().left+liNodes[0].offsetWidth/2-arrow.offsetWidth/2+'px';
 for (var i = 0; i < liNodes.length; i++) {
     liNodes[i].index=i;
-
+    // liNodes[i].onmouseenter=function () {
+    //     dowmNodes[this.index].style.width='100%';
+    // };
+    // liNodes[i].onmouseleave=function () {
+    //     dowmNodes[this.index].style.width='0';
+    // };
     liNodes[i].onclick=function () {
-        this.index=nowindex;
+        console.log(this.index);
+
+        // this.index=nowindex;
 
         for(var j=0;j<dowmNodes.length;j++){
             dowmNodes[j].style.width=0;
@@ -90,8 +98,14 @@ var licircleNodes=document.querySelectorAll('.circle li');
 var lichangeNodes=document.querySelectorAll('.fourmain li');
 var nowNum=0;
 var lastNum=0;
+var lastTime=0;
 for (var i = 0; i < licircleNodes.length; i++) {
     licircleNodes[i].num=i;
+    // 节流操作
+    // var nowTime=Date.now();
+    // if(nowTime-lastTime>2000){ return };
+    // lastTime=nowTime;
+
     licircleNodes[i].onclick=function () {
         for (var j = 0; j < licircleNodes.length; j++) {
             licircleNodes[j].className='';
@@ -145,6 +159,8 @@ function autoPlay() {
         lichangeNodes[lastcount].className='leftHide';
         lastcount=count;
     },2500);
+    count=nowNum;
+    lastcount=lastNum;
 }
 
 var contentCenter=document.querySelector('.contentCenter');
@@ -154,3 +170,4 @@ contentCenter.onmouseenter=function () {
 contentCenter.onmouseleave=function () {
     autoPlay();
 }
+
